@@ -14,4 +14,7 @@ import com.testSpringDataJPA.entity.MayBay;
 public interface MayBayRepo extends JpaRepository<MayBay, Integer> {
 	@Query("select mb from MayBay mb  where mb.tamBay > 10000")
 	List<MayBay> mayBays();
+	
+	@Query("Select m from MayBay m where m.loai like '%Boeing%'")
+	List<MayBay> loaiMayBay();
 }

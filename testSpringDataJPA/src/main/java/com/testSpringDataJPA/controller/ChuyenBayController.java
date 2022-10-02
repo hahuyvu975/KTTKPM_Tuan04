@@ -19,8 +19,21 @@ public class ChuyenBayController {
 		return chuyenBayRepo.chuyenBays();
 	}
 	
-	@GetMapping("/chuyenbayss")
+	@GetMapping("/duongbay")
 	public List<ChuyenBay> getbyDD(){
 		return chuyenBayRepo.chuyenBayss();
 	}
+	
+	@GetMapping("/xuatphat")
+	public List<ChuyenBay> getbyXuatPhat(){
+		return chuyenBayRepo.chuyenBaysss();
+	}
+	
+	@GetMapping("/tusg")
+	public List<ChuyenBay> getbyTuSaiGon(){
+		return chuyenBayRepo.chuyenBaySGN();
+	}
+	
+	
+	
 }

@@ -18,4 +18,9 @@ public class MayBayController {
 	public List<MayBay> getby10000km(){
 		return mayBayRepo.mayBays();
 	}
+	
+	@GetMapping("/loaimaybay")
+	public List<MayBay> getbyBoeing(){
+		return mayBayRepo.loaiMayBay();
+	}
 }
