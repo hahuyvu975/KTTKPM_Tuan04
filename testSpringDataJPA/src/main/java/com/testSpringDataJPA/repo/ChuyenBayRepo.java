@@ -16,4 +16,7 @@ import com.testSpringDataJPA.entity.ChuyenBay;
 public interface ChuyenBayRepo extends JpaRepository<ChuyenBay, String>  {
 	@Query("Select c from ChuyenBay c where c.gaDen = 'DAD'")
 	List<ChuyenBay> chuyenBays();
+	
+	@Query("Select cb from ChuyenBay cb where cb.doDai < 10000 and cb.doDai > 8000")
+	List<ChuyenBay> chuyenBayss();
 }
